@@ -9,7 +9,6 @@ def readDate(filename):
         count = 0
         n1 = 0
         for line in f:
-
             for i in line:
                 if i.isnumeric():
                     #print(type(i))
@@ -23,7 +22,6 @@ def readDate(filename):
                         n1 += 1
         countS.append(count)
         countNum.append(n)  # количество чисел
-
         countSRes = sum(countS)# сумма цифр
         countNumtRes = sum(countNum)
         average = countSRes / countNumtRes
@@ -37,6 +35,5 @@ def readDate(filename):
 
         f = open('files_output1.txt','w')  # открытие в режиме записи
         f.write('в файле ' + s + ' чисел, ' + 'наибольшее число - ' + s1 + ', наименьшее число - ' + s2 + ', среднее арифметическое - ' + s3 + ', четных чисел в файле - ' + s4)  # запись в файл
-
         f.close()  # закрытие файла
 readDate("files_input1.txt")
