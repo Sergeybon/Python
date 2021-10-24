@@ -1,8 +1,6 @@
-#def nFile(testFile):
-def readDate(filename):
 
-    #test = open(filename)
-    with open(filename) as f:
+def readDate(filename):
+     with open(filename) as f:
         n = 0
         for line in f:
             #if line.isnumeric():
