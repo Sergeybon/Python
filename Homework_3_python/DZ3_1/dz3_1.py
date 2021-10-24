@@ -1,5 +1,6 @@
 
 def readDate(filename):
+data = []
      with open(filename) as f:
         n = 0
         countNum = []  # список чисел
@@ -9,6 +10,7 @@ def readDate(filename):
         count = 0
         n1 = 0
         for line in f:
+#data.append([float(x) for x in line.split()])
             for i in line:
                 if i.isnumeric():
                     #print(type(i))
