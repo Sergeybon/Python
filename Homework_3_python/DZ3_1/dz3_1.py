@@ -2,10 +2,15 @@
 def readDate(filename):
      with open(filename) as f:
         n = 0
+        countWordText = []  # переменная для слов
         for line in f:
-            #if line.isnumeric():
-            #    print(type(line))
-                n += 1
+
+            for i in line:
+                if i.isnumeric():
+                    #print(type(line))
+                    n += 1
+
+
         s = str(n)
             # line = line.strip()
         print(s)

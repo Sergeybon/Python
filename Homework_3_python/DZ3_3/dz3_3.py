@@ -2,8 +2,8 @@ def numAndLen(filename):
     with open(filename) as f:
 
         countLet = 0
-        countWordText = []#переменная для слов
-        countLetText = []#переменная для букв
+        countWordText = []#список для слов
+        countLetText = []#список для букв
         for line in f:
             varTemp = len(line.split())#количество слов в строке
             countWordText.append(varTemp)#количество слов в тексте
