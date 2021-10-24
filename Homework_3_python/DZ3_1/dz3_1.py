@@ -13,5 +13,5 @@ def readDate(filename):
         f = open('files_output1.txt','w')  # открытие в режиме записи
         f.write('в файле ' + s + ' чисел')  # запись в файл
 
-    f.close()  # закрытие файла
+        f.close()  # закрытие файла
 readDate("files_input1.txt")
