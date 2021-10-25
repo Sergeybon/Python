@@ -1,7 +1,8 @@
-# тут пока для цифр получилось, для чисел пробую разобраться в файле dz3_1_1 - пока не работает
+
 def readDate(filename):
 
      with open(filename) as f:
+        data = []
         n = 0
         countNum = []  # список чисел
         countS = []
@@ -10,16 +11,18 @@ def readDate(filename):
         count = 0
         n1 = 0
         for line in f:
-            for i in line:
-                if i.isnumeric():
-                    n += 1
-                    if int(i) > int(max):
-                        max = i
-                    if int(i) < int(min):
-                        min = i
-                    count += int(i)
-                    if int(i) % 2 == 0:
-                        n1 += 1
+            data.append([float(i) for i in line.split()])
+        print(data)
+        for i in data:
+                        if i.isnumeric():
+                            n += 1
+                            if int(i) > int(max):
+                                max = i
+                            if int(i) < int(min):
+                                min = i
+                            count += int(i)
+                            if int(i) % 2 == 0:
+                                n1 += 1
         countS.append(count)
         countNum.append(n)  # количество чисел
         countSRes = sum(countS)# сумма цифр
