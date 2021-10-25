@@ -11,10 +11,11 @@ def readDate(filename):
         count = 0
         n1 = 0
         for line in f:
-            data.append([float(i) for i in line.split()])
-        print(data)
-        for i in data:
-                        if i.isnumeric():
+            data.append([float(i)
+                         for i in line.split()])
+            data1 = sum(data, [])
+        for i in data1:
+ #                       if i.isnumeric():
                             n += 1
                             if int(i) > int(max):
                                 max = i
@@ -36,7 +37,7 @@ def readDate(filename):
 
         print(s, n, countSRes, average, n1)
 
-        f = open('files_output1.txt','w')  # открытие в режиме записи
+        f = open('files_output.txt','w')  # открытие в режиме записи
         f.write('в файле ' + s + ' чисел, ' + 'наибольшее число - ' + s1 + ', наименьшее число - ' + s2 + ', среднее арифметическое - ' + s3 + ', четных чисел в файле - ' + s4)  # запись в файл
         f.close()  # закрытие файла
 readDate("files_input1.txt")
